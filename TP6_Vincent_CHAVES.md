@@ -13,3 +13,12 @@ Vincent CHAVES - 3ICS
 |      5      | 172.16.1.0             | /26    | 34                    | 62                        | 172.16.1.63          | 172.16.1.1                      | 172.16.1.62                    |
 |      6      | 172.16.1.64            | /26    | 37                    | 62                        | 172.16.1.127         | 172.16.1.65                     | 172.16.1.126                   |
 |      7      | 172.16.1.128           | /27    | 25                    | 30                        | 172.16.1.159         | 172.16.1.129                    | 172.16.1.158                   |
+
+## Exercice 2. Préparation de l’environnement
+
+- Je modifie les interfaces réseaux sur mes 2 VMs :
+- Client :
+- ![image](https://user-images.githubusercontent.com/113091304/194260982-3f8974f4-6c1f-499b-a57d-1bb6d203dba9.png)
+- Serveur :
+- ![image](https://user-images.githubusercontent.com/113091304/194261310-f32acab7-904e-4939-9607-4add586854d0.png)
+
