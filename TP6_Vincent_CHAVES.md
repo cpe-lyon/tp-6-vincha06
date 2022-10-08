@@ -64,6 +64,7 @@ décrit ci-dessus.
  - <code> max-lease-time 600;</code> correspond au temps maximum de validité d'une adresse IP, ce après quoi elle ne sera plus attribuée. Le client devra alors faire une nouvelle demande de DHCP sans quoi il n'aura plus d'adresse IP.
  
 ### 4. Editez le fichier /etc/default/isc-dhcp-server afin de spécifier l’interface sur laquelle le serveur doit écouter.
+ - J'ajoute l'interface ens224 :
 - ![image](https://user-images.githubusercontent.com/113091304/194730921-b6c4a0cf-5d1c-4e92-84db-a2f0fa9a183d.png)
 
 
