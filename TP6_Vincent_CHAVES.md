@@ -53,8 +53,8 @@ décrit ci-dessus.
 ### 2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
  - ![image](https://user-images.githubusercontent.com/113091304/194729143-6597c139-95c6-421e-adda-7394b7841214.png)
 
- ### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fichier dhcpd.conf avec les informations suivantes
- - Je créer le fichier de backup :
+ ### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fi chier dhcpd.conf avec les informations suivantes
+ - Je crée le fichier de backup :
  - ![image](https://user-images.githubusercontent.com/113091304/194729276-54574983-79df-4b17-9bb3-04995d1f89af.png)
  - Je modifie le fichier de conf :
 - ![image](https://user-images.githubusercontent.com/113091304/194730041-97c6a46b-2346-48f5-8454-295ababba4a9.png)
@@ -63,4 +63,8 @@ décrit ci-dessus.
  - <code> default-lease-time 120;</code> correspond au bail par défaut, c'est à dire qu'une adresse IP fournie par le serveur DHCP devra être renouvelée au bout de 120 secondes.
  - <code> max-lease-time 600;</code> correspond au temps maximum de validité d'une adresse IP, ce après quoi elle ne sera plus attribuée. Le client devra alors faire une nouvelle demande de DHCP sans quoi il n'aura plus d'adresse IP.
  
+### 4. Editez le fichier /etc/default/isc-dhcp-server afin de spécifier l’interface sur laquelle le serveur doit écouter.
+- ![image](https://user-images.githubusercontent.com/113091304/194730921-b6c4a0cf-5d1c-4e92-84db-a2f0fa9a183d.png)
+
+
  
