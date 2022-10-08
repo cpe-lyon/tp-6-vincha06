@@ -46,7 +46,15 @@ décrit ci-dessus.
 ### Un serveur DHCP permet aux ordinateurs clients d’obtenir automatiquement une configuration réseau (adresse IP, serveur DNS, passerelle par défaut…), pour une durée déterminée. Ainsi, dans notre cas, l’interfaces réseau de client doit être configurée automatiquement par serveur. Le réseau local tpadmin.local a pour adresse 192.168.100.0/24 (on aurait pu choisir une autre adresse ; attention, 192.168.1.0/24 est souvent réservée, par exemple par votre FAI).
 
 ### 1. Sur le serveur, installez le paquet isc-dhcp-server. La commande systemctl status isc-dhcp-server devrait vous indiquer que le serveur n’a pas réussi à démarrer, ce qui est normal puisqu’il n’est pas encore configuré (en particulier, il n’a pas encore d’adresses IP à distribuer).
+- Pour installer le paquet je fais : <code> sudo apt-get install isc-dhcp-server
+- Une fois installé, je lance la commande "systemctl status isc-dhcp-server" et cela me retourne qu'il n'a pas réussi à démarrer :
+- ![image](https://user-images.githubusercontent.com/113091304/194728509-428cfb6e-a729-4985-9b77-615626ac4714.png)
 
+## Exercice 3. Installation du serveur DHCP
+ 
+### 1. Sur le serveur, installez le paquet isc-dhcp-server. La commande systemctl status isc-dhcp-server
+devrait vous indiquer que le serveur n’a pas réussi à démarrer, ce qui est normal puisqu’il n’est pas
+encore configuré (en particulier, il n’a pas encore d’adresses IP à distribuer).
 
 
 
