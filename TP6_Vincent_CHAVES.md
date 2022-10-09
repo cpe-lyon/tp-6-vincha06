@@ -1,6 +1,7 @@
 Vincent CHAVES - 3ICS
 
 # TP 6 - Services réseau
+## (Je précise que ma 2ème VM neuve avait un problème de résolution de nom, impossibilité de faire apt update entre autres, ce qui m'a retardé pour ce TP et le TP5)
 
 ## Exercice 1. Adressage IP
 
@@ -51,21 +52,34 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194728509-428cfb6e-a729-4985-9b77-615626ac4714.png)
 
 ### 2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
- - ![image](https://user-images.githubusercontent.com/113091304/194729143-6597c139-95c6-421e-adda-7394b7841214.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194729143-6597c139-95c6-421e-adda-7394b7841214.png)
 
- ### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fi chier dhcpd.conf avec les informations suivantes
- - Je crée le fichier de backup :
- - ![image](https://user-images.githubusercontent.com/113091304/194729276-54574983-79df-4b17-9bb3-04995d1f89af.png)
- - Je modifie le fichier de conf :
+### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fi chier dhcpd.conf avec les informations suivantes
+- Je crée le fichier de backup :
+- ![image](https://user-images.githubusercontent.com/113091304/194729276-54574983-79df-4b17-9bb3-04995d1f89af.png)
+- Je modifie le fichier de conf :
 - ![image](https://user-images.githubusercontent.com/113091304/194730041-97c6a46b-2346-48f5-8454-295ababba4a9.png)
 
- ### A quoi correspondent les deux premières lignes ?
- - <code> default-lease-time 120;</code> correspond au bail par défaut, c'est à dire qu'une adresse IP fournie par le serveur DHCP devra être renouvelée au bout de 120 secondes.
- - <code> max-lease-time 600;</code> correspond au temps maximum de validité d'une adresse IP, ce après quoi elle ne sera plus attribuée. Le client devra alors faire une nouvelle demande de DHCP sans quoi il n'aura plus d'adresse IP.
+### A quoi correspondent les deux premières lignes ?
+- <code> default-lease-time 120;</code> correspond au bail par défaut, c'est à dire qu'une adresse IP fournie par le serveur DHCP devra être renouvelée au bout de 120 secondes.
+- <code> max-lease-time 600;</code> correspond au temps maximum de validité d'une adresse IP, ce après quoi elle ne sera plus attribuée. Le client devra alors faire une nouvelle demande de DHCP sans quoi il n'aura plus d'adresse IP.
  
 ### 4. Editez le fichier /etc/default/isc-dhcp-server afin de spécifier l’interface sur laquelle le serveur doit écouter.
- - J'ajoute l'interface ens224 :
+- J'ajoute l'interface ens224 :
 - ![image](https://user-images.githubusercontent.com/113091304/194730921-b6c4a0cf-5d1c-4e92-84db-a2f0fa9a183d.png)
+
+### 5. Validez votre fichier de configuration avec la commande dhcpd -t puis redémarrez le serveur DHCP (avec la commande systemctl restart isc-dhcp-server) et vérifiez qu’il est actif.
+- Malgré les 2 commandes effectuées (voir le screenshot ci-dessous), le serveur n'est toujours pas actif :
+- ![image](https://user-images.githubusercontent.com/113091304/194782594-c1559a60-a3a9-46d0-a0a5-7f6655adac46.png)
+- Après avoir lu les erreurs, j'active l'interface ens224 de cette manière :
+- ![image](https://user-images.githubusercontent.com/113091304/194782800-0f221538-5b69-4f49-bb40-dd5b148dbcea.png)
+- Je restart ensuite le serveur DHCP puis je vérifie son status :
+- ![image](https://user-images.githubusercontent.com/113091304/194782864-b3135669-411c-4f38-85b2-12e3d80d735d.png)
+- Il est enfin actif.
+ 
+ ### 6. Notre serveur DHCP est configuré ! Passons désormais au client. Si vous avez suivi le sujet du TP 1, le client a été créé en clonant la machine virtuelle du serveur. Par conséquent, son nom d’hôte est toujours serveur. Vérifiez que la carte réseau du client est débranchée, puis démarrez le client (il est possible qu’il mette un certain temps à démarrer : ceci est dû à l’absence de connexion Internet). Comme pour le serveur, désinstallez ensuite cloud-init, puis modifiez le nom de la machine (elle doit s’appeler client.tpadmin.local).
+ - <code>sudo hostnamectl set-hostname client.tpadmin.local</code>
+ 
 
 
  
