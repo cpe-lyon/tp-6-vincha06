@@ -1,5 +1,5 @@
 Vincent CHAVES - 3ICS
-## (Je précise que ma 2ème VM neuve avait un problème de résolution de nom, impossibilité de faire apt update entre autres, ce qui m'a retardé pour ce TP et le TP5)
+## (Je précise que j'avais des problèmes sur ma 2ème VM neuve, impossibilité de faire apt update entre autres, messages d'erreur de résolution de nom etc, ce qui m'a retardé pour ce TP et le TP5)
 
 # TP 6 - Services réseau
 
@@ -79,6 +79,7 @@ décrit ci-dessus.
  
  ### 6. Notre serveur DHCP est configuré ! Passons désormais au client. Si vous avez suivi le sujet du TP 1, le client a été créé en clonant la machine virtuelle du serveur. Par conséquent, son nom d’hôte est toujours serveur. Vérifiez que la carte réseau du client est débranchée, puis démarrez le client (il est possible qu’il mette un certain temps à démarrer : ceci est dû à l’absence de connexion Internet). Comme pour le serveur, désinstallez ensuite cloud-init, puis modifiez le nom de la machine (elle doit s’appeler client.tpadmin.local).
  - <code>sudo hostnamectl set-hostname client.tpadmin.local</code>
+ - 
  
 
 
