@@ -1,7 +1,7 @@
 Vincent CHAVES - 3ICS
+(Je précise que ma 2ème VM neuve avait un problème de résolution de nom, impossibilité de faire apt update entre autres, ce qui m'a retardé pour ce TP et le TP5)
 
 # TP 6 - Services réseau
-# (Je précise que ma 2ème VM neuve avait un problème de résolution de nom, impossibilité de faire apt update entre autres, ce qui m'a retardé pour ce TP et le TP5)
 
 ## Exercice 1. Adressage IP
 
