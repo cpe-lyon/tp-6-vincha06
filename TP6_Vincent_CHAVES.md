@@ -138,8 +138,7 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194870626-49f47f29-8a7d-42e3-9f25-06f67a11d6ad.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194870781-345ef661-b509-41cb-9e4c-a3a8f70fa002.png)
 
-### 2. A ce stade, Bind n’est pas configuré et ne fait donc pas grand chose. L’une des manières les simples de le configurer est d’en faire un serveur cache : il ne fait rien à part mettre en cache les réponses de serveurs externes à qui il transmet la requête de résolution de nom.  Le binaire (= programme) installé avec le paquet bind9 ne s’appelle ni bind ni bind9 mais named... Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur
-bind9.
+### 2. A ce stade, Bind n’est pas configuré et ne fait donc pas grand chose. L’une des manières les simples de le configurer est d’en faire un serveur cache : il ne fait rien à part mettre en cache les réponses de serveurs externes à qui il transmet la requête de résolution de nom.  Le binaire (= programme) installé avec le paquet bind9 ne s’appelle ni bind ni bind9 mais named... Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur bind9.
 - ![image](https://user-images.githubusercontent.com/113091304/194881041-dacacc58-8336-476c-958a-6641d5b3923b.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194882805-8165accc-3c6d-429b-8ebb-e4892bc868ad.png)
  - ![image](https://user-images.githubusercontent.com/113091304/194882340-432f9a13-5322-4863-a6f1-02d1896a789a.png)
@@ -147,6 +146,21 @@ bind9.
 ### 3. Sur le client, retentez un ping sur www.google.fr. Cette fois ça devrait marcher ! On valide ainsi la configuration du DHCP effectuée précédemment, puisque c’est grâce à elle que le client a trouvé son serveur DNS. 
 
 ### 4. Sur le client, installez le navigateur en mode texte lynx et essayez de surfer sur fr.wikipedia.org (bienvenue dans le passé...)
+- ![image](https://user-images.githubusercontent.com/113091304/194886777-55d57174-bbea-4ec0-8249-a00433af9fe8.png)
+
+# Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local
+
+### 1. Modifiez le fichier /etc/bind/named.conf.local et ajoutez les lignes suivantes
+- ![image](https://user-images.githubusercontent.com/113091304/194892810-de6a83bb-54c0-4c79-a671-36c5249f6a83.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194893907-73f48993-d8ba-4490-8437-555d87965ade.png)
+
+### 2. Créez une copie appelée db.tpadmin.local du fichier db.local. Ce fichier est un fichier configuration typique de DNS, constitué d’enregistrements DNS (cf. cours). Dans le nouveau fichier, remplacez toutes les références à localhost par tpadmin.local, et l’adresse 127.0.0.1 par l’adresse IP du serveur.
+- ![image](https://user-images.githubusercontent.com/113091304/194894234-72c39e5c-cba6-4103-a00a-df563343832d.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194895196-be051c5a-7df7-4e75-8ca3-ea830e56ed3c.png)
+
+### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom
+- ![image](https://user-images.githubusercontent.com/113091304/194895403-83ba9049-2f39-4a30-ad53-a57d3b934671.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194896019-c0968bbe-e19f-4fa2-96cc-c3f0fb7ce867.png)
 
 
 
