@@ -1,5 +1,5 @@
 Vincent CHAVES - 3ICS
-## (Je précise que j'avais des problèmes sur ma 2ème VM neuve, impossibilité de faire apt update entre autres, messages d'erreur de résolution de nom etc, ce qui m'a retardé pour ce TP et le TP5)
+## (Je précise que ma 2ème VM neuve avait des problèmes qui m'ont beaucoup retardé pour ce TP et le TP6: jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire apt update, messages d'erreur de résolution de nom, impossibilité d'installer le serveur DHCP, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir continuer les TP sans prendre encore plus de retard)
 
 # TP 6 - Services réseau
 
@@ -78,8 +78,46 @@ décrit ci-dessus.
 - Il est enfin actif.
  
  ### 6. Notre serveur DHCP est configuré ! Passons désormais au client. Si vous avez suivi le sujet du TP 1, le client a été créé en clonant la machine virtuelle du serveur. Par conséquent, son nom d’hôte est toujours serveur. Vérifiez que la carte réseau du client est débranchée, puis démarrez le client (il est possible qu’il mette un certain temps à démarrer : ceci est dû à l’absence de connexion Internet). Comme pour le serveur, désinstallez ensuite cloud-init, puis modifiez le nom de la machine (elle doit s’appeler client.tpadmin.local).
- - <code>sudo hostnamectl set-hostname client.tpadmin.local</code>
- - 
+- <code>sudo hostnamectl set-hostname client.tpadmin.local</code>
+- Les commandes sudo sont longues à s'éxecuter alors je modifie le fichier hosts :
+- ![image](https://user-images.githubusercontent.com/113091304/194783981-bc65231a-d559-4699-983b-79d8b56ca3db.png)
+- Il n'y a désormais plus de latence
+ 
+ ###7. La commande tail -f /var/log/syslog affiche de manière continue les dernières lignes du fichier de log du système (dès qu’une nouvelle ligne est écrite à la fin du fichier, elle est affichée à l’écran). Lancez cette commande sur le serveur, puis connectez la carte réseau du client et observez les logs sur le serveur. Expliquez à quoi correspondent les messages DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK. Vérifiez que le client reçoit bien une adresse IP de la plage spécifiée précédemment.
+- ![image](https://user-images.githubusercontent.com/113091304/194784669-15156a44-69ce-4c80-ad9c-e129b0147399.png)
+- DHCP REQUEST = requête du client pour obtenir une adresse IP
+- DHC PACK = confirmation de réception de la requête
+- DHCP DISCOVER = découverte d'une adresse disponible
+- DHC POFFER = envoi de l'adresse IP au client
+
+ ### 8. Que contient le fichier /var/lib/dhcp/dhcpd.leases sur le serveur, et qu’afficle la commande dhcp-lease-list ?
+- Le fichier /var/lib/dhcp/dhcpd.leases contient la liste des bails finis :
+- ![image](https://user-images.githubusercontent.com/113091304/194785072-bef83ae6-501c-4a04-843d-ed6d41189d3d.png)
+- La commande dhcp-lease-list affiche l'adresse MAC, IP et la date de fin du bail d'un client :
+- ![image](https://user-images.githubusercontent.com/113091304/194785210-23c73b39-de60-402d-b6cf-c02a0cb3361c.png)
+
+ ### 9. Vérifiez que les deux machines peuvent communiquer via leur adresse IP, à l’aide de la commande ping.
+ - Du client au serveur, ça ping :
+ - ![image](https://user-images.githubusercontent.com/113091304/194784960-5b52179b-9292-4dce-b1c2-a25f1dc05262.png)
+ - Du serveur au client, ça ping :
+ - ![image](https://user-images.githubusercontent.com/113091304/194784982-903633be-32d9-4b99-a6fb-371e7ae440cd.png)
+ 
+ ### 10. Modifiez la configuration du serveur pour que l’interface réseau du client reçoive l’IP statique 192.168.100.20
+- Je note l'adresse MAC du client :
+- ![image](https://user-images.githubusercontent.com/113091304/194785514-b7578698-6cdb-4305-9f06-11319d7f32c9.png)
+- Puis sur le serveur :
+- ![image](https://user-images.githubusercontent.com/113091304/194785421-c3f552ca-d5d9-4ae7-a036-85995ecce3a7.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194785621-be46c6ba-79fe-49f6-acbc-1bd218fa7ac8.png)
+
+ 
+ ### Vérifiez que la nouvelle configuration a bien été appliquée sur le client (éventuellement, désactivez
+puis réactivez l’interface réseau pour forcer le renouvellement du bail DHCP, ou utilisez la commande
+dhclient -v).
+
+ 
+ 
+
+ 
  
 
 
