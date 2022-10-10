@@ -140,7 +140,11 @@ décrit ci-dessus.
 ### 2. A ce stade, Bind n’est pas configuré et ne fait donc pas grand chose. L’une des manières les simples de le configurer est d’en faire un serveur cache : il ne fait rien à part mettre en cache les réponses de serveurs externes à qui il transmet la requête de résolution de nom.  Le binaire (= programme) installé avec le paquet bind9 ne s’appelle ni bind ni bind9 mais named... Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur
 bind9.
 - ![image](https://user-images.githubusercontent.com/113091304/194881041-dacacc58-8336-476c-958a-6641d5b3923b.png)
-- ![image](https://user-images.githubusercontent.com/113091304/194881474-114f35e3-88c3-4bf0-ad4f-c9d2779af84d.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194882805-8165accc-3c6d-429b-8ebb-e4892bc868ad.png)
+ - ![image](https://user-images.githubusercontent.com/113091304/194882340-432f9a13-5322-4863-a6f1-02d1896a789a.png)
+ 
+ 
+
 
 
 
