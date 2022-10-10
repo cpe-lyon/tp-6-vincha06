@@ -176,7 +176,7 @@ que le fichier de zone. Sur la dernière ligne, faites correspondre l’adresse 
 - ![image](https://user-images.githubusercontent.com/113091304/194948361-eeb4a47f-dbb5-473b-8b17-405099ea2b89.png)
  
 ### 5. Redémarrer le serveur Bind9. Vous devriez maintenant être en mesure de « pinguer »les différentes machines du réseau.
-- ![image](https://user-images.githubusercontent.com/113091304/194948619-83af0f0d-f279-4693-8ea9-fa176fff04ff.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194949005-47eef519-9f56-4af6-b71e-bb5ec2308a4d.png)
 
 
 
