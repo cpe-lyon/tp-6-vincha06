@@ -161,7 +161,17 @@ décrit ci-dessus.
 ### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom
 - ![image](https://user-images.githubusercontent.com/113091304/194895403-83ba9049-2f39-4a30-ad53-a57d3b934671.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194896019-c0968bbe-e19f-4fa2-96cc-c3f0fb7ce867.png)
-- 
+ 
+### Créez ensuite le fichier db.192.168.100 à partir du fichier db.127, et modifiez le de la même manière
+que le fichier de zone. Sur la dernière ligne, faites correspondre l’adresse IP avec celle du serveur
+(Attention, il y a un petit piège !).
+- ![image](https://user-images.githubusercontent.com/113091304/194943333-d7d12bf3-ef34-4f4b-b6a7-1bf3851f2b67.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194945221-806a664f-3e0d-42c1-8392-6693eee3c819.png)
+ 
+### 4. Utilisez les utilitaires named-checkconf et named-checkzone pour valider vos fichiers de configuration
+ 
+
+
 
 
 
