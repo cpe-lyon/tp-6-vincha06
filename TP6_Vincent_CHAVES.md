@@ -131,7 +131,19 @@ décrit ci-dessus.
 ### 2. Ensuite, il faut autoriser la traduction d’adresse source (masquerading) en ajoutant la règle iptables suivante : sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE
 - ![image](https://user-images.githubusercontent.com/113091304/194859952-6cfc258d-fc47-413d-b5d0-9d8dd73f2083.png)
 
-### Vérifiez à présent que vous arrivez à « pinguer » une adresse IP (par exemple 1.1.1.1) depuis le client.
+# Exercice 5. Installation du serveur DNS
+
+### 1. Sur le serveur, commencez par installer bind9, puis assurez-vous que le service est bien actif
+- ![image](https://user-images.githubusercontent.com/113091304/194870626-49f47f29-8a7d-42e3-9f25-06f67a11d6ad.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194870781-345ef661-b509-41cb-9e4c-a3a8f70fa002.png)
+
+### 2. A ce stade, Bind n’est pas configuré et ne fait donc pas grand chose. L’une des manières les simples de le configurer est d’en faire un serveur cache : il ne fait rien à part mettre en cache les réponses de serveurs externes à qui il transmet la requête de résolution de nom.  Le binaire (= programme) installé avec le paquet bind9 ne s’appelle ni bind ni bind9 mais named... Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur
+bind9.
+- ![image](https://user-images.githubusercontent.com/113091304/194881041-dacacc58-8336-476c-958a-6641d5b3923b.png)
+- 
+
+
+
 
 
 
