@@ -111,7 +111,20 @@ décrit ci-dessus.
 - Puis sur le serveur :
 - ![image](https://user-images.githubusercontent.com/113091304/194785421-c3f552ca-d5d9-4ae7-a036-85995ecce3a7.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194785621-be46c6ba-79fe-49f6-acbc-1bd218fa7ac8.png)
- 
+
+ ### Vérifiez que la nouvelle configuration a bien été appliquée sur le client (éventuellement, désactivez puis réactivez l’interface réseau pour forcer le renouvellement du bail DHCP, ou utilisez la commande dhclient -v).
+- Malgré ça, l'IP attribuée au client n'est pas celle voulue :
+- ![image](https://user-images.githubusercontent.com/113091304/194786075-e1f51b61-fb56-49f5-8d37-bb9a85815b67.png)
+- J'ai alors relancé le serveur DHCP avec la commande :
+- ![image](https://user-images.githubusercontent.com/113091304/194785987-b8ea1ccf-3a02-4dfc-93d1-285f0243015d.png)
+- Puis j'ai refais <code>dhclient</code> -v sur le client :
+- ![image](https://user-images.githubusercontent.com/113091304/194786092-a5efdc15-b54b-4ed2-a777-4907611ca585.png)
+- Cette fois l'IP est bien l'IP fixe voulue.
+
+### Exercice 4. Donner un accès à Internet au client
+
+
+
  
 
  
