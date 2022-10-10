@@ -1,7 +1,7 @@
 Vincent CHAVES - 3ICS
 
 *************************************************
-## (Je précise que ma 2ème VM neuve avait des problèmes qui m'ont beaucoup retardé pour ce TP et la suite : jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire apt update, messages d'erreur de résolution de nom, impossibilité d'installer le serveur DHCP, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir continuer les TP sans prendre encore plus de retard)
+## /!\ (Je tiens à préciser que ma 2ème VM neuve avait des problèmes qui m'ont beaucoup retardé pour ce TP et la suite : jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire apt update, messages d'erreur de résolution de nom, impossibilité d'installer le serveur DHCP, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir continuer les TP sans prendre encore plus de retard)
 *************************************************
 
 # TP 6 - Services réseau
