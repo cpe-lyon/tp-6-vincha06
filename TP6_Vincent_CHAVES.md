@@ -1,7 +1,7 @@
 Vincent CHAVES - 3ICS
 
 *************************************************
-## /!\ Je tiens à préciser que comme vu avec Monsieur BEZET-TORRES, ma 2ème VM neuve avait des problèmes dès le début qui m'ont beaucoup retardé pour ce TP et la suite : impossibilité d'installer le serveur DHCP, jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire un apt update, impossibilité d'installer des paquets, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir installer le serveur DHCP, mais ça m'a tout de même posé problème lorsque je devais installer des paquets sur la 2ème VM (désormais cliente). J'ai pris du retard sur les derniers TP à cause de ça.
+## /!\ Je tiens à préciser que comme vu avec Monsieur BEZET-TORRES, ma 2ème VM neuve avait des problèmes dès le début qui m'ont beaucoup retardé pour ce TP et la suite : impossibilité d'installer le serveur DHCP, jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire un apt update, impossibilité d'installer des paquets, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir installer le serveur DHCP, mais ça m'a tout de même posé problème lorsque je devais installer des paquets sur la 2ème VM (désormais cliente). J'ai pris du retard sur les derniers TP à cause de ça. De plus je suis à l'internat de Sup Alta et il n'y avait pas de connexion internet pendant 2 week-ends.
 *************************************************
 
 # TP 6 - Services réseau
