@@ -117,7 +117,7 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194786075-e1f51b61-fb56-49f5-8d37-bb9a85815b67.png)
 - J'ai alors relancé le serveur DHCP avec la commande :
 - ![image](https://user-images.githubusercontent.com/113091304/194785987-b8ea1ccf-3a02-4dfc-93d1-285f0243015d.png)
-- Puis j'ai refais <code>dhclient</code> -v sur le client :
+- Puis j'ai refais <code>dhclient -v</code> sur le client :
 - ![image](https://user-images.githubusercontent.com/113091304/194786092-a5efdc15-b54b-4ed2-a777-4907611ca585.png)
 - Cette fois l'IP est bien l'IP fixe voulue.
 
