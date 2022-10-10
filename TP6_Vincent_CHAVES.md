@@ -169,7 +169,8 @@ que le fichier de zone. Sur la dernière ligne, faites correspondre l’adresse 
 - ![image](https://user-images.githubusercontent.com/113091304/194945221-806a664f-3e0d-42c1-8392-6693eee3c819.png)
  
 ### 4. Utilisez les utilitaires named-checkconf et named-checkzone pour valider vos fichiers de configuration
- 
+- ![image](https://user-images.githubusercontent.com/113091304/194946977-fca74bf4-44fa-420b-ac8c-0cd3cb39ac31.png)
+
 
 
 
