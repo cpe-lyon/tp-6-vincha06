@@ -122,7 +122,7 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194786092-a5efdc15-b54b-4ed2-a777-4907611ca585.png)
 - Cette fois l'IP est bien l'IP fixe voulue.
 
-# Exercice 4. Donner un accès à Internet au client
+## Exercice 4. Donner un accès à Internet au client
 
 ### 1. La première chose à faire est d’autoriser l’IP forwarding sur le serveur (désactivé par défaut, étant donné que la plupart des utilisateurs n’en ont pas besoin). Pour cela, il suffit de décommenter la ligne net.ipv4.ip_forward=1 dans le fichier /etc/sysctl.conf. Pour que les changements soient pris en compte immédiatement, il faut saisir la commande sudo sysctl -p /etc/sysctl.conf.
 - ![image](https://user-images.githubusercontent.com/113091304/194858111-991dc02d-8137-41f7-a04b-99176055fa50.png)
@@ -132,7 +132,7 @@ décrit ci-dessus.
 ### 2. Ensuite, il faut autoriser la traduction d’adresse source (masquerading) en ajoutant la règle iptables suivante : sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE
 - ![image](https://user-images.githubusercontent.com/113091304/194859952-6cfc258d-fc47-413d-b5d0-9d8dd73f2083.png)
 
-# Exercice 5. Installation du serveur DNS
+## Exercice 5. Installation du serveur DNS
 
 ### 1. Sur le serveur, commencez par installer bind9, puis assurez-vous que le service est bien actif
 - ![image](https://user-images.githubusercontent.com/113091304/194870626-49f47f29-8a7d-42e3-9f25-06f67a11d6ad.png)
@@ -148,7 +148,7 @@ décrit ci-dessus.
 ### 4. Sur le client, installez le navigateur en mode texte lynx et essayez de surfer sur fr.wikipedia.org (bienvenue dans le passé...)
 - ![image](https://user-images.githubusercontent.com/113091304/194886777-55d57174-bbea-4ec0-8249-a00433af9fe8.png)
 
-# Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local
+## Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local
 
 ### 1. Modifiez le fichier /etc/bind/named.conf.local et ajoutez les lignes suivantes
 - ![image](https://user-images.githubusercontent.com/113091304/194892810-de6a83bb-54c0-4c79-a671-36c5249f6a83.png)
