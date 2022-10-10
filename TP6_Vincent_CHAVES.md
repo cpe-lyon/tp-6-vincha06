@@ -108,11 +108,8 @@ décrit ci-dessus.
 - Puis sur le serveur :
 - ![image](https://user-images.githubusercontent.com/113091304/194785421-c3f552ca-d5d9-4ae7-a036-85995ecce3a7.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194785621-be46c6ba-79fe-49f6-acbc-1bd218fa7ac8.png)
-
  
- ### Vérifiez que la nouvelle configuration a bien été appliquée sur le client (éventuellement, désactivez
-puis réactivez l’interface réseau pour forcer le renouvellement du bail DHCP, ou utilisez la commande
-dhclient -v).
+ 
 
  
  
