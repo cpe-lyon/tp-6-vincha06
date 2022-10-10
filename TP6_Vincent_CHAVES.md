@@ -156,7 +156,7 @@ décrit ci-dessus.
 
 ### 2. Créez une copie appelée db.tpadmin.local du fichier db.local. Ce fichier est un fichier configuration typique de DNS, constitué d’enregistrements DNS (cf. cours). Dans le nouveau fichier, remplacez toutes les références à localhost par tpadmin.local, et l’adresse 127.0.0.1 par l’adresse IP du serveur.
 - ![image](https://user-images.githubusercontent.com/113091304/194894234-72c39e5c-cba6-4103-a00a-df563343832d.png)
-- ![image](https://user-images.githubusercontent.com/113091304/194895196-be051c5a-7df7-4e75-8ca3-ea830e56ed3c.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194946018-ea5de3fc-f609-46de-9040-22bf96128aa6.png)
 
 ### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom
 - ![image](https://user-images.githubusercontent.com/113091304/194895403-83ba9049-2f39-4a30-ad53-a57d3b934671.png)
