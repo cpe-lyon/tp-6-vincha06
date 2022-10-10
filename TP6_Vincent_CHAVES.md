@@ -121,7 +121,17 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194786092-a5efdc15-b54b-4ed2-a777-4907611ca585.png)
 - Cette fois l'IP est bien l'IP fixe voulue.
 
-### Exercice 4. Donner un accès à Internet au client
+# Exercice 4. Donner un accès à Internet au client
+
+### 1. La première chose à faire est d’autoriser l’IP forwarding sur le serveur (désactivé par défaut, étant donné que la plupart des utilisateurs n’en ont pas besoin). Pour cela, il suffit de décommenter la ligne net.ipv4.ip_forward=1 dans le fichier /etc/sysctl.conf. Pour que les changements soient pris en compte immédiatement, il faut saisir la commande sudo sysctl -p /etc/sysctl.conf.
+- ![image](https://user-images.githubusercontent.com/113091304/194858111-991dc02d-8137-41f7-a04b-99176055fa50.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194858224-ac4c9fc0-27f3-4488-a0bb-fd640b626d41.png)
+- ![image](https://user-images.githubusercontent.com/113091304/194858453-55a509c7-38bc-4563-88cd-f6d35af1b65c.png)
+
+### 2. Ensuite, il faut autoriser la traduction d’adresse source (masquerading) en ajoutant la règle iptables suivante : sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE
+- ![image](https://user-images.githubusercontent.com/113091304/194859952-6cfc258d-fc47-413d-b5d0-9d8dd73f2083.png)
+
+### Vérifiez à présent que vous arrivez à « pinguer » une adresse IP (par exemple 1.1.1.1) depuis le client.
 
 
 
