@@ -161,8 +161,7 @@ décrit ci-dessus.
 ### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom
 - ![image](https://user-images.githubusercontent.com/113091304/194895403-83ba9049-2f39-4a30-ad53-a57d3b934671.png)
 - ![image](https://user-images.githubusercontent.com/113091304/194896019-c0968bbe-e19f-4fa2-96cc-c3f0fb7ce867.png)
-
-
+- 
 
 
 
