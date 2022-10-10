@@ -1,7 +1,7 @@
 Vincent CHAVES - 3ICS
 
 *************************************************
-## /!\ Je tiens à préciser que comme vu avec Monsieur BEZET-TORRES, ma 2ème VM neuve avait des problèmes qui m'ont beaucoup retardé pour ce TP et la suite : impossibilité d'installer le serveur DHCP, jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire un apt update, messages d'erreur de résolution de nom, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir continuer les TP sans prendre encore plus de retard. Les TPs restants seront finis au plus vite.
+## /!\ Je tiens à préciser que comme vu avec Monsieur BEZET-TORRES, ma 2ème VM neuve avait des problèmes dès le début qui m'ont beaucoup retardé pour ce TP et la suite : impossibilité d'installer le serveur DHCP, jusqu'à 30 secondes parfois pour éxecuter une simple commande cd, impossibilité de faire un apt update, impossibilité d'installer des paquets, etc. J'ai finalement inversé la VM cliente et la VM serveur pour pouvoir installer le serveur DHCP, mais ça m'a tout de même posé problème lorsque je devais installer des paquets sur la 2ème VM (désormais cliente). J'ai pris du retard sur les derniers TP à cause de ça.
 *************************************************
 
 # TP 6 - Services réseau
@@ -143,7 +143,11 @@ bind9.
 - ![image](https://user-images.githubusercontent.com/113091304/194882805-8165accc-3c6d-429b-8ebb-e4892bc868ad.png)
  - ![image](https://user-images.githubusercontent.com/113091304/194882340-432f9a13-5322-4863-a6f1-02d1896a789a.png)
  
- 
+### 3. Sur le client, retentez un ping sur www.google.fr. Cette fois ça devrait marcher ! On valide ainsi la configuration du DHCP effectuée précédemment, puisque c’est grâce à elle que le client a trouvé son serveur DNS. 
+
+### 4. Sur le client, installez le navigateur en mode texte lynx et essayez de surfer sur fr.wikipedia.org (bienvenue dans le passé...)
+
+
 
 
 
