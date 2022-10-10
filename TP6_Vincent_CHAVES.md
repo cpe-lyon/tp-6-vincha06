@@ -27,6 +27,7 @@ décrit ci-dessus.
 - ![image](https://user-images.githubusercontent.com/113091304/194260982-3f8974f4-6c1f-499b-a57d-1bb6d203dba9.png)
 - Serveur :
 - ![image](https://user-images.githubusercontent.com/113091304/194261310-f32acab7-904e-4939-9607-4add586854d0.png)
+- (Après des problèmes sur la VM CHAV2 j'ai finis par inverser les configurations ci-dessus pour utiliser la première VM comme serveur)
 
 ### 2. Démarrez le serveur et vérifiez que les interfaces réseau sont bien présentes. A quoi correspond l’interface appelée lo ?
 - Client :
